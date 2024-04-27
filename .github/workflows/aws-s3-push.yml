@@ -7,10 +7,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: List the directories
-        run: ls
-      - name: Print working directory
-        run: pwd      
+      - name: Run npm install
+        run: npm install
       - name: Run npm build
         run: npm run build
       - name: List the directories
