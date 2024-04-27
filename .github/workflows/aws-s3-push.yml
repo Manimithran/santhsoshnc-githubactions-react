@@ -1,0 +1,14 @@
+name: Push to AWS S3
+run-name: ${{ github.actor }} is running this GitHub Actions pipeline 🚀
+on: [push]
+jobs:
+  push-to-s3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Run npm build
+        run: npm run build
+      - name: List the directories
+        run: ls
+
